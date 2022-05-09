@@ -1,0 +1,2 @@
+docker build . -t my-caddy-image
+docker run --name my-caddy-server -p 8080:80 -d my-caddy-image
