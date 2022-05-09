@@ -1,2 +1,10 @@
 docker build . -t my-caddy-image
+docker image ls
 docker run --name my-caddy-server -p 8080:80 -d my-caddy-image
+docker container ls -a
+docker stop my-caddy-server
+docker rm my-caddy-server
+docker rmi my-caddy-image
+docker build . -t my-caddy-image
+docker run --name my-caddy-server -v $(pwd)/pages:/usr/src/pages -p 8080:80 -d my-caddy-image
+docker container ls -a
